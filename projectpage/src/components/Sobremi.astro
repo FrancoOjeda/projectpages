@@ -1,0 +1,87 @@
+<section>
+  <img
+    src='/developermen.webp'
+    alt='Imagen animada de un hombre sentado mirando su computadora, programando'
+  />
+  <article>
+    <h2>Sobre mi</h2>
+    <p>
+      ¡Hola! Soy <span>Franco Martin Ojeda</span>, nacido en
+      la provincia de Santa Fe, Argentina. Actualmente estoy
+      cursando una <span
+        >Tecnicatura Universitaria en Tecnologías de la
+        Información</span
+      >, y he estado aprendiendo desarrollo web de manera
+      autodidacta durante casi 3 años, además de un año de
+      formación académica formal.
+    </p>
+    <p>
+      Mis conocimientos abarcan tanto el frontend como el
+      backend. En el frontend, mis tecnologías favoritas son
+      <span>Tailwind CSS, Astro y React JS</span>, mientras
+      que en el backend disfruto trabajar con <span
+        >Node JS, Express JS y SQLite 3</span
+      >. Además, he utilizado motores de plantillas como
+      Express-Handlebars y EJS.
+    </p>
+    <!-- <p>
+      Mi pasión por el desarrollo web nació del deseo de
+      crecer profesionalmente y, algún día, poder aportar
+      algo significativo a la sociedad, dejando una marca y
+      ganando reconocimiento por mis contribuciones. Uno de
+      mis mayores logros ha sido desarrollar desde cero una
+      API para un proyecto llamado AllServicesAPI, donde
+      asumí el rol de líder y guía del equipo, desarrollando
+      toda la lógica de la aplicación, la base de datos y el
+      despliegue, a pesar de no tener conocimientos previos
+      en esta última área.
+    </p>
+    <p>
+      En cuanto a mis hobbies, disfruto de la lectura, los
+      videojuegos y la actividad física recreativa. Me
+      considero una persona dedicada, con un fuerte interés
+      por hacer las cosas lo mejor posible y compartir mis
+      conocimientos con los demás. Me encanta enfrentar
+      desafíos que impliquen creatividad para su resolución.
+    </p>
+    <p>
+      Si estás comenzando en el desarrollo web, mi consejo
+      es tener paciencia, ser diligente con el estudio, no
+      saltarse pasos y estudiar bien las bases de los
+      lenguajes y tecnologías que te interesen. No te quedes
+      con lo primero que encuentres y siempre está dispuesto
+      a aprender cosas nuevas.
+    </p> -->
+  </article>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 16px auto;
+    gap: 16px;
+    width: 80%;
+  }
+  h2 {
+    color: hsl(0, 0%, 100%);
+  }
+  p {
+    color: hsl(0, 0%, 90%);
+    max-width: 60ch;
+  }
+  img {
+    width: 300px;
+  }
+  span {
+    color: hsl(46, 75%, 73%);
+  }
+
+  @media (width > 600px) {
+    section {
+      flex-direction: row;
+    }
+  }
+</style>
