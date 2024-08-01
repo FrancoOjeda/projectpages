@@ -1,0 +1,19 @@
+{
+  "name": "projectpages",
+  "version": "1.0.0",
+  "description": "Pagina con los proyectos realizados por mi para practicar distintas habilidades de desarrollo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoOjeda/projectpages.git"
+  },
+  "author": "Franco Ojeda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoOjeda/projectpages/issues"
+  },
+  "homepage": "https://github.com/FrancoOjeda/projectpages#readme"
+}
