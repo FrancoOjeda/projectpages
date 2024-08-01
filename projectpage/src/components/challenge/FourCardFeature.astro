@@ -1,0 +1,201 @@
+<div class='container'>
+  <div class='container__challenge'>
+    <h1 class='title__challenge'>
+      Four Card Feature Challenge - Frontend Mentor
+    </h1>
+    <div class='line__gap'></div>
+  </div>
+  <header>
+    <span class='subtitle'
+      >Reliable, efficient delivery</span
+    >
+    <h1 class='title'>Powered by Technology</h1>
+    <p class='description'>
+      Our Artificial Intelligence powered tools use millions
+      of project data points to ensure that your project is
+      successful
+    </p>
+  </header>
+  <article class='main__content'>
+    <div class='card__supervisor'>
+      <h2>Supervisor</h2>
+      <p>
+        Monitors activity to identify project roadblocks
+      </p>
+    </div>
+    <div class='card__teamBuilder'>
+      <h2>Team Builder</h2>
+      <p>
+        Scans our talent network to create the optimal team
+        for your project
+      </p>
+    </div>
+    <div class='card__karma'>
+      <h2>Karma</h2>
+      <p>
+        Regularly evaluates our talent to ensure quality
+      </p>
+    </div>
+    <div class='card__calculator'>
+      <h2>Calculator</h2>
+      <p>
+        Uses data from past projects to provide better
+        delivery
+      </p>
+    </div>
+  </article>
+  <!-- <footer>
+    <p class='attribution'>
+      Challenge by <a
+        href='https://www.frontendmentor.io?ref=challenge'
+        target='_blank'
+        >Frontend Mentor</a
+      >. Coded by <a href='#'>Your Name Here</a>.
+    </p>
+  </footer> -->
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+  .container {
+    background-color: hsl(0, 0%, 98%);
+    text-align: center;
+  }
+
+  header {
+    padding: 32px 16px;
+  }
+  .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+    margin: 0;
+  }
+  .title__challenge {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+    padding-top: 16px;
+    font-size: 25px;
+  }
+
+  .line__gap {
+    width: 90%;
+    border: 1px solid hsl(234, 12%, 34%);
+  }
+
+  .container__challenge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+  }
+  .description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+    font-size: 15px;
+  }
+
+  .main__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 16px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .card__supervisor {
+    border-top: 2px solid hsl(180, 62%, 55%);
+    box-shadow: 5px 5px 5px hsl(0, 1%, 82%);
+    border-radius: 5px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 16px;
+  }
+  .card__teamBuilder {
+    border-top: 2px solid hsl(0, 78%, 62%);
+    box-shadow: 5px 5px 5px hsl(0, 1%, 82%);
+    border-radius: 5px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 16px;
+  }
+  .card__karma {
+    border-top: 2px solid hsl(34, 97%, 64%);
+    box-shadow: 5px 5px 5px hsl(0, 1%, 82%);
+    border-radius: 5px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    padding: 16px;
+  }
+  .card__calculator {
+    border-top: 2px solid hsl(212, 86%, 64%);
+    box-shadow: 5px 5px 5px hsl(0, 1%, 82%);
+    border-radius: 5px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 16px;
+  }
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: hsl(234, 12%, 34%);
+    text-align: left;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color: hsl(229, 6%, 66%);
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  @media (width < 600px) {
+    .main__content {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .card__supervisor,
+    .card__calculator,
+    .card__karma,
+    .card__teamBuilder {
+      grid-column: 1 / -1;
+    }
+
+    .card__supervisor {
+      grid-row: 1 / 2;
+    }
+
+    .card__teamBuilder {
+      grid-row: 2 / 3;
+    }
+
+    .card__karma {
+      grid-row: 3 / 4;
+    }
+
+    .card__calculator {
+      grid-row: 4 / 5;
+    }
+  }
+</style>

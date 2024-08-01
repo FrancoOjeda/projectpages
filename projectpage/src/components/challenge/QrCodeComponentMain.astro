@@ -1,8 +1,9 @@
-<main class='container'>
+<section class='container'>
   <header>
     <h1 class='title__challenge'>
       Qr Code Challenge - Frontend Mentor
     </h1>
+    <div class='line__gap'></div>
   </header>
   <div class='card'>
     <img
@@ -22,7 +23,7 @@
   </div>
   <small class='date__realized'>Realizado: 01/08/2024</small
   >
-</main>
+</section>
 <style>
   .container {
     color: hsl(0, 0%, 100%);
@@ -36,12 +37,21 @@
   header {
     background-color: hsl(0, 0%, 100%);
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .line__gap {
+    width: 90%;
+    border: 1px solid hsl(218, 44%, 22%);
+    margin: 16px 0;
   }
   .card {
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 0 0 8px;
     background-color: hsl(0, 0%, 100%);
-    margin: 16px;
+    margin: 0 16px;
   }
   .container__description {
     text-align: center;
