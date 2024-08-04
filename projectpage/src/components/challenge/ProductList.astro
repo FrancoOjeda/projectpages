@@ -1,0 +1,69 @@
+---
+import Product from './Product.astro'
+import { products } from '../../lib/dataProducts'
+---
+
+<div class='container__challenge'>
+  <h1 class='title__challenge'>
+    Product list with cart - Frontend Mentor
+  </h1>
+  <div class='line__gap'></div>
+  <h2 class='product__title'>Desserts</h2>
+</div>
+<div class='product__page'>
+  <div class='product__container'>
+    {
+      products.map((product) => (
+        <Product products={product} />
+      ))
+    }
+  </div>
+</div>
+<small class='date__realized'>Realizado: 03/08/2024</small>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+  .date__realized {
+    color: hsl(216, 15%, 48%);
+    font-size: 12px;
+  }
+  .product__page {
+    background-color: hsl(20, 50%, 98%);
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
+  }
+  .title__challenge {
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .container__challenge {
+    background-color: hsl(20, 50%, 98%);
+    padding: 16px;
+  }
+  .line__gap {
+    border: 1px solid hsl(14, 25%, 72%);
+  }
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 16px;
+    padding: 16px;
+  }
+  .product__title {
+    margin-left: 32px;
+  }
+  @media (width < 600px) {
+    .product__page {
+      grid-template-columns: 1fr;
+    }
+
+    .product__container {
+      grid-template-columns: 1fr;
+      place-content: center;
+      margin: auto;
+    }
+  }
+</style>

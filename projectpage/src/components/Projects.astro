@@ -1,10 +1,14 @@
 ---
 import FourCardFeature from './challenge/FourCardFeature.astro'
 import QrCodeComponentMain from './challenge/QrCodeComponentMain.astro'
+import ProductList from './challenge/ProductList.astro'
 ---
 
 <section>
   <h2>Proyectos Realizados</h2>
+  <article>
+    <ProductList />
+  </article>
   <article>
     <FourCardFeature />
   </article>
@@ -22,6 +26,7 @@ import QrCodeComponentMain from './challenge/QrCodeComponentMain.astro'
     gap: 16px;
     width: 80%;
   }
+
   h2 {
     color: hsl(0, 0%, 100%);
   }

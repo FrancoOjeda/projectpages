@@ -1,0 +1,72 @@
+---
+import Cart from './icons/Cart.astro'
+const { products } = Astro.props
+const { image, name, price, description, id } = products
+---
+
+<div class='card'>
+  <img
+    src={image}
+    alt={description}
+  />
+  <button class='product__add'> <Cart />Add to Cart</button>
+  <div class='product__container__description'>
+    <p class='product__description'>{description}</p>
+    <h3 class='product__name'>{name}</h3>
+    <p class='product__price'>{price}</p>
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+  img {
+    width: 200px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .card {
+    box-shadow: 2px 2px 2px hsl(14, 25%, 72%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Red Hat Text', sans-serif;
+    position: relative;
+    padding: 16px;
+  }
+  .product__add {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    border-radius: 20px;
+    border: 2px solid hsl(7, 20%, 60%);
+    padding: 4px;
+    font-size: 12px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 72px;
+  }
+
+  .product__container__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .product__name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .product__description {
+    color: hsl(14, 25%, 72%);
+    margin: 0;
+  }
+  .product__price {
+    color: hsl(14, 86%, 42%);
+    font-weight: 700;
+    margin: 0;
+  }
+</style>
