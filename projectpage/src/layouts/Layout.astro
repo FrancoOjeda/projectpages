@@ -2,13 +2,14 @@
 interface Props {
 	title: string
 }
-
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang='es'>
 	<head>
+		<ViewTransitions />
 		<meta charset='UTF-8' />
 		<meta
 			name='description'
