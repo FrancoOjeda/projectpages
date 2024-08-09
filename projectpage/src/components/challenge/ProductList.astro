@@ -1,6 +1,8 @@
 ---
 import Product from './Product.astro'
+import { ProductWithReact } from './Product.jsx'
 import { products } from '../../lib/dataProducts'
+import { Cart } from './Cart.jsx'
 ---
 
 <div class='container__challenge'>
@@ -14,9 +16,17 @@ import { products } from '../../lib/dataProducts'
   <div class='product__container'>
     {
       products.map((product) => (
-        <Product products={product} />
+        // <Product products={product} />
+        <ProductWithReact
+          client:visible
+          products={product}
+        />
       ))
     }
+  </div>
+  <div>
+    <!-- Valor hardcodeado hasta sumar los items -->
+    <Cart cantidad={0} />
   </div>
 </div>
 <small class='date__realized'>Realizado: 03/08/2024</small>
@@ -30,7 +40,7 @@ import { products } from '../../lib/dataProducts'
   .product__page {
     background-color: hsl(20, 50%, 98%);
     display: grid;
-    grid-template-columns: repeat(4, 290px);
+    grid-template-columns: 3fr 1fr;
   }
   .title__challenge {
     font-family: 'Red Hat Text', sans-serif;

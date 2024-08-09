@@ -1,29 +1,4 @@
----
-import Cart from './icons/Cart.astro'
-const { products } = Astro.props
-const { image, name, price, description, id } = products
----
-
-<div class='card'>
-  <img
-    src={image}
-    alt={description}
-  />
-  <button
-    class='product__add'
-    id='addToCart'
-  >
-    <Cart />Add to Cart</button
-  >
-  <div class='product__container__description'>
-    <p class='product__description'>{description}</p>
-    <h3 class='product__name'>{name}</h3>
-    <p class='product__price'>{price}</p>
-  </div>
-</div>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
 
   img {
     width: 200px;
@@ -37,7 +12,7 @@ const { image, name, price, description, id } = products
     justify-content: space-around;
     align-items: center;
     font-family: 'Red Hat Text', sans-serif;
-    position: relative;
+    position: relative; /*Permite mover el boton al medio de la card*/
     padding: 16px;
   }
   .product__add {
@@ -50,7 +25,7 @@ const { image, name, price, description, id } = products
     font-size: 12px;
     font-family: 'Red Hat Text', sans-serif;
     font-weight: 600;
-    position: absolute;
+    position: absolute; /*Mueve el boton al medio de la imagen*/
     bottom: 72px;
   }
 
@@ -74,4 +49,3 @@ const { image, name, price, description, id } = products
     font-weight: 700;
     margin: 0;
   }
-</style>

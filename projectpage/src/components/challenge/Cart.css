@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+.cart__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.title__cart{
+  align-self: flex-start;
+  padding-left: 16px;
+  color: hsl(14, 86%, 42%);
+  font-weight: 700;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.cart__empty__description{
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color:hsl(14, 25%, 50%);;
+}
