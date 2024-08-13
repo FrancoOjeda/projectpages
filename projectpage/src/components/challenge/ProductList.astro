@@ -1,8 +1,27 @@
 ---
+import { CartProvider } from './CardContext.jsx'
 import Product from './Product.astro'
 import { ProductWithReact } from './Product.jsx'
 import { products } from '../../lib/dataProducts'
 import { Cart } from './Cart.jsx'
+import { map } from 'nanostores'
+
+// Declaramos el estado inicial con el primer argumento
+const $cartItems = map([
+  {
+    id: 0,
+    name: 'PRUEBA',
+    description: 'DESCRIPCION PRUEBA',
+    price: 0,
+    image: 'UNA IMAGEN',
+    quantity: 1
+  }
+])
+
+export const addToCart = () => {
+  const productInCart = $cartItems.get()[0]
+  console.log(productInCart)
+}
 ---
 
 <div class='container__challenge'>
@@ -16,7 +35,6 @@ import { Cart } from './Cart.jsx'
   <div class='product__container'>
     {
       products.map((product) => (
-        // <Product products={product} />
         <ProductWithReact
           client:visible
           products={product}
@@ -26,7 +44,7 @@ import { Cart } from './Cart.jsx'
   </div>
   <div>
     <!-- Valor hardcodeado hasta sumar los items -->
-    <Cart cantidad={0} />
+    <Cart client:visible />
   </div>
 </div>
 <small class='date__realized'>Realizado: 03/08/2024</small>

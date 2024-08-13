@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
+
 }
 
 .title__cart{
@@ -21,4 +22,57 @@
   font-weight: 500;
   font-size: 15px;
   color:hsl(14, 25%, 50%);;
+}
+
+.cart_quantity_description{
+  display: flex;
+  justify-content: start;
+}
+.cart__item{
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Red Hat Text', sans-serif;
+
+}
+li {
+  list-style: none;
+}
+
+p{
+  margin: 8px;
+}
+
+.cart__quantity__products{
+  color: hsl(14, 86%, 42%);
+  font-weight: 700;
+}
+
+.cart__price__products{
+  color: hsl(14, 25%, 50%);
+}
+
+.cart__price__products__total{
+  color:hsl(12, 20%, 44%);
+  font-weight: 600;
+}
+
+.cart__product__name{
+  font-weight: 700;
+}
+
+.cart__button__check{
+  background-color: hsl(14, 86%, 42%);
+  font-family: 'Red Hat Text', sans-serif;
+  color: hsl(0, 0%, 100%);
+  padding: 8px;
+  width: 90%;
+  border-radius: 24px;
+  border: none;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.cart__product__gap{
+  border-bottom: 1px solid hsl(0, 0%, 90%);
 }
